@@ -5,7 +5,7 @@ namespace Qlimix\DependencyContainer\Pimple;
 use Pimple\Container;
 use Psr\Container\ContainerInterface;
 use Qlimix\DependencyContainer\DependencyMergerInterface;
-use Qlimix\DependencyContainer\Exception\DependencyMergerException;
+use Qlimix\DependencyContainer\Exception\DependencyException;
 
 final class PimpleDependencyMerger implements DependencyMergerInterface
 {
@@ -26,7 +26,7 @@ final class PimpleDependencyMerger implements DependencyMergerInterface
     public function merge(string $id, callable $service): void
     {
         if (!\method_exists($service, '__invoke')) {
-            throw new DependencyMergerException('callable should be invokable');
+            throw new DependencyException('callable should be invokable');
         }
 
         $container = $this->pimple[ContainerInterface::class];

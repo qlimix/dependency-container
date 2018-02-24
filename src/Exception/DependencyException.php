@@ -2,6 +2,6 @@
 
 namespace Qlimix\DependencyContainer\Exception;
 
-final class DependencyMergerException extends \Exception
+final class DependencyException extends \Exception
 {
 }

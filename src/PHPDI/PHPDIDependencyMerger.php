@@ -4,7 +4,7 @@ namespace Qlimix\DependencyContainer\PHPDI;
 
 use DI\Container;
 use Qlimix\DependencyContainer\DependencyMergerInterface;
-use Qlimix\DependencyContainer\Exception\DependencyMergerException;
+use Qlimix\DependencyContainer\Exception\DependencyException;
 
 final class PHPDIDependencyMerger implements DependencyMergerInterface
 {
@@ -25,7 +25,7 @@ final class PHPDIDependencyMerger implements DependencyMergerInterface
     public function merge(string $id, callable $service): void
     {
         if (!\method_exists($service, '__invoke')) {
-            throw new DependencyMergerException('callable should be invokable');
+            throw new DependencyException('callable should be invokable');
         }
 
         $this->phpdi->set($id, $service);
