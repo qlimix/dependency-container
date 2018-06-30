@@ -16,6 +16,14 @@ interface DependencyMergerInterface
     public function merge(string $id, callable $service): void;
 
     /**
+     * @param string $id
+     * @param mixed $value
+     *
+     * @throws DependencyException
+     */
+    public function mergeValue(string $id, $value): void;
+
+    /**
      * @return ContainerInterface
      *
      * @throws DependencyException

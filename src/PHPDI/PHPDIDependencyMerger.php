@@ -33,6 +33,14 @@ final class PHPDIDependencyMerger implements DependencyMergerInterface
     }
 
     /**
+     * @inheritDoc
+     */
+    public function mergeValue(string $id, $value): void
+    {
+        $this->phpdi->set($id, $value);
+    }
+
+    /**
      * @inheritdoc
      */
     public function getContainer(): ContainerInterface

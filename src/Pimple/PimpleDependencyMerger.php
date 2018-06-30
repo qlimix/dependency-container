@@ -37,6 +37,14 @@ final class PimpleDependencyMerger implements DependencyMergerInterface
     }
 
     /**
+     * @inheritDoc
+     */
+    public function mergeValue(string $id, $value): void
+    {
+        $this->pimple[$id] = $value;
+    }
+
+    /**
      * @inheritdoc
      */
     public function getContainer(): ContainerInterface
