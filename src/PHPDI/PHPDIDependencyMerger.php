@@ -45,10 +45,6 @@ final class PHPDIDependencyMerger implements DependencyMergerInterface
      */
     public function getContainer(): ContainerInterface
     {
-        try {
-            return $this->phpdi->get(ContainerInterface::class);
-        } catch (\Throwable $exception) {
-            throw new DependencyException('Unable to get Container', 0, $exception);
-        }
+        return $this->phpdi;
     }
 }
