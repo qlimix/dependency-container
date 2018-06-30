@@ -2,14 +2,14 @@
 
 namespace Qlimix\DependencyContainer;
 
-use Qlimix\DependencyContainer\Exception\DependencyException;
+use Qlimix\DependencyContainer\Exception\DependencyProviderException;
 
 interface DependencyProviderInterface
 {
     /**
      * @param DependencyMergerInterface $merger
      *
-     * @throws DependencyException
+     * @throws DependencyProviderException
      */
     public function provide(DependencyMergerInterface $merger): void;
 }
