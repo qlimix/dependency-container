@@ -54,6 +54,6 @@ final class PimpleDependencyMerger implements DependencyMergerInterface
      */
     public function getContainer(): ContainerInterface
     {
-        return $this->pimple[ContainerInterface::class];
+        return $this->psrContainer;
     }
 }
