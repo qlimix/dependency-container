@@ -3,6 +3,7 @@
 namespace Qlimix\DependencyContainer\PHPDI;
 
 use DI\Container;
+use Psr\Container\ContainerInterface;
 use Qlimix\DependencyContainer\DependencyMergerInterface;
 use Qlimix\DependencyContainer\Exception\DependencyException;
 
@@ -29,5 +30,17 @@ final class PHPDIDependencyMerger implements DependencyMergerInterface
         }
 
         $this->phpdi->set($id, $service);
+    }
+
+    /**
+     * @inheritdoc
+     */
+    public function getContainer(): ContainerInterface
+    {
+        try {
+            return $this->phpdi->get(ContainerInterface::class);
+        } catch (\Throwable $exception) {
+            throw new DependencyException('Unable to get Container', 0, $exception);
+        }
     }
 }

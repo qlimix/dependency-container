@@ -2,6 +2,7 @@
 
 namespace Qlimix\DependencyContainer;
 
+use Psr\Container\ContainerInterface;
 use Qlimix\DependencyContainer\Exception\DependencyException;
 
 interface DependencyMergerInterface
@@ -13,4 +14,11 @@ interface DependencyMergerInterface
      * @throws DependencyException
      */
     public function merge(string $id, callable $service): void;
+
+    /**
+     * @return ContainerInterface
+     *
+     * @throws DependencyException
+     */
+    public function getContainer(): ContainerInterface;
 }

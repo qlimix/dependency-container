@@ -35,4 +35,12 @@ final class PimpleDependencyMerger implements DependencyMergerInterface
             return $service($container);
         };
     }
+
+    /**
+     * @inheritdoc
+     */
+    public function getContainer(): ContainerInterface
+    {
+        return $this->pimple[ContainerInterface::class];
+    }
 }
