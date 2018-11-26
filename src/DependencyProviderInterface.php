@@ -7,9 +7,9 @@ use Qlimix\DependencyContainer\Exception\DependencyProviderException;
 interface DependencyProviderInterface
 {
     /**
-     * @param DependencyMergerInterface $merger
+     * @param DependencyRegistryInterface $registry
      *
      * @throws DependencyProviderException
      */
-    public function provide(DependencyMergerInterface $merger): void;
+    public function provide(DependencyRegistryInterface $registry): void;
 }

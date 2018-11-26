@@ -2,14 +2,19 @@
 
 namespace Qlimix\DependencyContainer;
 
-use Qlimix\DependencyContainer\Exception\DependencyRegistryException;
+use Psr\Container\ContainerInterface;
 
-interface DependencyRegistryInterface
+interface DependencyRegistryInterface extends ContainerInterface
 {
     /**
-     * @param DependencyProviderInterface $provider
-     *
-     * @throws DependencyRegistryException
+     * @param string $id
+     * @param callable $service
      */
-    public function register(DependencyProviderInterface $provider): void;
+    public function set(string $id, callable $service): void;
+
+    /**
+     * @param string $id
+     * @param mixed $value
+     */
+    public function setValue(string $id, $value): void;
 }

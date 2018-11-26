@@ -2,20 +2,20 @@
 
 namespace Qlimix\DependencyContainer\Registry;
 
-use Qlimix\DependencyContainer\DependencyMergerInterface;
-use Qlimix\DependencyContainer\DependencyProviderInterface;
 use Qlimix\DependencyContainer\DependencyRegistryInterface;
+use Qlimix\DependencyContainer\DependencyProviderInterface;
+use Qlimix\DependencyContainer\DependencyProviderRegistryInterface;
 use Qlimix\DependencyContainer\Exception\DependencyRegistryException;
 
-final class PsrDependencyRegistry implements DependencyRegistryInterface
+final class DependencyProviderRegistry implements DependencyProviderRegistryInterface
 {
-    /** @var DependencyMergerInterface */
+    /** @var DependencyRegistryInterface */
     private $merger;
 
     /**
-     * @param DependencyMergerInterface $merger
+     * @param DependencyRegistryInterface $merger
      */
-    public function __construct(DependencyMergerInterface $merger)
+    public function __construct(DependencyRegistryInterface $merger)
     {
         $this->merger = $merger;
     }
