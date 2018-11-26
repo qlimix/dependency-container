@@ -16,10 +16,6 @@
   "require": {
     "psr/container": "^1.0"
   },
-  "require-dev": {
-    "php-di/php-di": "^6.0",
-    "pimple/pimple": "^3.2"
-  },
   "config": {
     "sort-packages": true
   }
