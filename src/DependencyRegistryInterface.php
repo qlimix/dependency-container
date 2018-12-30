@@ -17,4 +17,6 @@ interface DependencyRegistryInterface extends ContainerInterface
      * @return mixed
      */
     public function make(string $id);
+
+    public function merge(string $id, array $value): void;
 }
