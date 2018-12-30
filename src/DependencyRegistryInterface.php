@@ -13,6 +13,8 @@ interface DependencyRegistryInterface extends ContainerInterface
      */
     public function setValue(string $id, $value): void;
 
+    public function setMaker(string $id, callable $maker);
+
     /**
      * @return mixed
      */
