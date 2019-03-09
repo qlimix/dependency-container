@@ -4,7 +4,7 @@ namespace Qlimix\DependencyContainer;
 
 use Psr\Container\ContainerInterface;
 
-interface DependencyRegistryInterface extends ContainerInterface
+interface RegistryInterface extends ContainerInterface
 {
     public function set(string $id, callable $service): void;
 
