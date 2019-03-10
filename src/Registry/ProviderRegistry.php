@@ -10,7 +10,7 @@ final class ProviderRegistry implements ProviderRegistryInterface, ProviderColle
     private $providers;
 
     /**
-     * @inheritDoc
+     * @inheritdoc
      */
     public function register(ProviderInterface $provider): void
     {
@@ -18,7 +18,7 @@ final class ProviderRegistry implements ProviderRegistryInterface, ProviderColle
     }
 
     /**
-     * @inheritDoc
+     * @inheritdoc
      */
     public function getProviders(): array
     {
