@@ -2,6 +2,8 @@
 
 namespace Qlimix\DependencyContainer\Exception;
 
-final class ProviderException extends \Exception
+use Exception;
+
+final class ProviderException extends Exception
 {
 }

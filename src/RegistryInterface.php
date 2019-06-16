@@ -20,5 +20,8 @@ interface RegistryInterface extends ContainerInterface
      */
     public function make(string $id, ?string $setId = null);
 
+    /**
+     * @param mixed[] $value
+     */
     public function merge(string $id, array $value): void;
 }
