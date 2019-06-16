@@ -1,22 +1,38 @@
 {
-  "name": "qlimix/dependency-container",
-  "type": "library",
-  "license": "mit",
-  "authors": [
-    {
-      "name": "Frank",
-      "email": "frank@qlimix.net"
+    "name": "qlimix/dependency-container",
+    "type": "library",
+    "description": "Filling a PSR dependency container and setup interfaces",
+    "license": "MIT",
+    "keywords": [
+        "qlimix",
+        "container",
+        "dependency",
+        "di",
+        "PSR"
+    ],
+    "authors": [
+        {
+            "name": "Frank",
+            "email": "frank@qlimix.net"
+        }
+    ],
+    "require": {
+        "psr/container": "^1.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "Qlimix\\DependencyContainer\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Qlimix\\Tests\\DependencyContainer\\": "tests/"
+        }
+    },
+    "config": {
+        "sort-packages": true
+    },
+    "require-dev": {
+        "qlimix/code-standard": "^1.0"
     }
-  ],
-  "autoload": {
-    "psr-4": {
-      "Qlimix\\DependencyContainer\\": "src/"
-    }
-  },
-  "require": {
-    "psr/container": "^1.0"
-  },
-  "config": {
-    "sort-packages": true
-  }
 }
