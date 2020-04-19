@@ -8,18 +8,14 @@ use Qlimix\DependencyContainer\Registry\ProviderRegistry;
 
 final class ProviderRegistryTest extends TestCase
 {
-    /** @var ProviderRegistry */
-    private $registry;
+    private ProviderRegistry $registry;
 
     protected function setUp(): void
     {
         $this->registry = new ProviderRegistry();
     }
 
-    /**
-     * @test
-     */
-    public function shouldRegisterProviders(): void
+    public function testShouldRegisterProviders(): void
     {
         $providers = [
             $this->createMock(ProviderInterface::class),
