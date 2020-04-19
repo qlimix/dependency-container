@@ -4,11 +4,9 @@
     "description": "Registering dependencies on a PSR container and setup interfaces",
     "license": "MIT",
     "keywords": [
-        "qlimix",
         "container",
         "dependency",
-        "di",
-        "PSR"
+        "di"
     ],
     "authors": [
         {
@@ -17,8 +15,11 @@
         }
     ],
     "require": {
-        "php": ">=7.2",
+        "php": ">=7.4",
         "psr/container": "^1.0"
+    },
+    "require-dev": {
+        "qlimix/code-standard": "^2.0"
     },
     "autoload": {
         "psr-4": {
@@ -32,8 +33,5 @@
     },
     "config": {
         "sort-packages": true
-    },
-    "require-dev": {
-        "qlimix/code-standard": "^1.0"
     }
 }
