@@ -7,11 +7,8 @@ use Qlimix\DependencyContainer\ProviderInterface;
 final class ProviderRegistry implements ProviderRegistryInterface, ProviderCollectionInterface
 {
     /** @var ProviderInterface[] */
-    private $providers;
+    private array $providers;
 
-    /**
-     * @inheritdoc
-     */
     public function register(ProviderInterface $provider): void
     {
         $this->providers[] = $provider;
