@@ -1,5 +1,7 @@
 # Dependency-container
 
+> **Archived:** this package is no longer maintained.
+
 [![Travis CI](https://api.travis-ci.org/qlimix/dependency-container.svg?branch=master)](https://travis-ci.org/qlimix/dependency-container)
 [![Coveralls](https://img.shields.io/coveralls/github/qlimix/dependency-container.svg)](https://coveralls.io/qlimix/dependency-container)
 [![Packagist](https://img.shields.io/packagist/v/qlimix/dependency-container.svg)](https://packagist.org/packages/qlimix/dependency-container)
